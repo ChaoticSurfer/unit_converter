@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/reset.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <title>Converter</title>
+</head>
+<body>
+<div class="container">
+    <form method="post" class="form-box" action="{{ url_for("result") }}">
+        <div class="section-1">
+            <label for="measure"></label>
+            <input type="text" id="unit" name="measure">
+
+            <label for="unit"></label>
+            <select name="unit" id="measure">
+                <option value="მილიმეტრი">მილიმეტრი</option>
+                <option value="სანტიმეტრი">სანტიმეტრი</option>
+                <option value="მეტრი">მეტრი</option>
+                <option value="კილომეტრი">კილომეტრი</option>
+            </select>
+
+        </div>
+        <div class="section-2">
+            <button type="submit">კონვერტაცია</button>
+        </div>
+        <div class="section-3">
+            <span id="res-1">{{ data[0] }}</span>
+            <span id="res-2">{{ data[1] }}</span>
+            <span id="res-3">{{ data[2] }}</span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+https://github.com/ChaoticSurfer/mari/
