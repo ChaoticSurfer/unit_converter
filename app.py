@@ -18,20 +18,9 @@ def convert(unit, measure=0):
     return results
 
 
-@app.route('/', methods=['POST', 'GET'])
-def hello_world():
-    if request.method == 'POST':
-        measure = request.form["measure"]
-        unit = request.form['unit']
-
-        if measure is None:
-            measure = 0
-        print(measure)
-        print(unit)
-        data = convert(unit, int(measure))
-
-        return render_template('index.html', data=data)
-    return render_template('index.html', data=('', '', ''))
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 
 def read_file():
