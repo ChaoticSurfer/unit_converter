@@ -51,7 +51,8 @@ def result():
 
         data = convert(unit, int(measure))
 
-        ip_address = request.remote_addr
+        ip_address = request.remote_addr # თუ pythonanyehere --> request.headers['X-Real-IP']
+
         write_to_file(f"{ip_address} {data}")
 
         return render_template('result.html', data=data)
