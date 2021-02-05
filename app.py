@@ -34,7 +34,7 @@ def write_to_file(txt):
         f.write(str(txt) + "\n")
 
 
-@app.route("/table", methods=["GET"])
+@app.route("/logs", methods=["GET"])
 def show_table():
     lines = read_file()
     lines = tuple(map(lambda x: x.split(), lines))
